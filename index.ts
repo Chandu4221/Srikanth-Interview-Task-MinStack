@@ -1,6 +1,7 @@
 // Import stylesheets
 import './style.css';
 import { MinStack } from './MinStack';
+import ValidParanthesis from './ValidParentheses.js';
 
 // Write TypeScript code!
 const appDiv: HTMLElement = document.getElementById('app');
@@ -22,3 +23,20 @@ const topItem = minStack.top(); // return 0
 console.log('topItem', topItem);
 minValueInStack = minStack.getMin(); // return -2
 console.log('minValueInStack', minValueInStack);
+
+// ---------------------------------------------
+
+// ex:1
+console.log('Input ()', ValidParanthesis('()'));
+
+// ex:2
+console.log('Input ()[]{}', ValidParanthesis('()[]{}'));
+
+// ex:3
+console.log('Input (]', ValidParanthesis('(]'));
+
+// ex:4
+console.log('Input ([)]', ValidParanthesis('([)]'));
+
+// ex:5
+console.log('Input {[]}', ValidParanthesis('{[]}'));
