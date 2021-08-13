@@ -1,4 +1,3 @@
-
 export class MinStack {
   stack: Array<any>;
 
@@ -6,16 +5,18 @@ export class MinStack {
     this.stack.push(val);
   }
   pop(): void {
-    this.stack.pop();
+    if (this.stack.length) this.stack.pop();
   }
 
   top(): Number {
-    const lastItemIndex = this.stack.length - 1;
-    return this.stack[lastItemIndex];
+    if (this.stack.length) {
+      const lastItemIndex = this.stack.length - 1;
+      return this.stack[lastItemIndex];
+    }
   }
 
   getMin(): Number {
-    return Math.min(...this.stack);
+    if (this.stack.length) return Math.min(...this.stack);
   }
 
   constructor() {
