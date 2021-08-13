@@ -7,7 +7,7 @@ function ValidParanthesis(input) {
   };
   const openingBraces = Object.keys(matchingBraces);
 
-  for (let char in input) {
+  for (let char of input) {
     if (openingBraces.includes(char)) {
       stack.push(char);
     } else {

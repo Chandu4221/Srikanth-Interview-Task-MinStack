@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "lib": ["ES2016"]
   }
 }
